@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/red">
+
+    <View android:id="@+id/view"
+          android:layout_width="@dimen/button_width"
+          android:layout_height="@dimen/button_height"
+          android:background="@color/green"
+          android:padding="@dimen/padding_standard"
+          android:layout_marginLeft="@dimen/margin_left"
+          android:layout_marginTop="@dimen/margin_top"/>
+
+    <TextView
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:padding="@dimen/padding_standard"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/green"
+
+            android:gravity="bottom|right"
+            android:text="@string/hello"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/red"
+            android:textStyle="bold|italic"/>
+
+    <!--default value for "android:gravity" for Button in android is "center"-->
+
+    <Button android:id="@+id/btn_auto_show"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_blue"
+
+            android:text="@string/show_auto"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/blue"
+            android:textStyle="italic"/>
+    <Button android:id="@+id/btn_show_cat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_blue"
+
+            android:text="@string/show_cat"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/blue"
+            android:textStyle="italic"/>
+</LinearLayout>
+
+

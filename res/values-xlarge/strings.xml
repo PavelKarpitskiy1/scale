@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="show_cat">Show the cat</string>
+    <string name="cat_activity">Cat activity!</string>
+    <string name="alert_view_clicked">View clicked!</string>
+    <string name="back">Return back</string>
+</resources>

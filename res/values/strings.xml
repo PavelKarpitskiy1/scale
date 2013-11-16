@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">HandlerAdvMessage</string>
+    <string name="hello">Hello World, MyActivity</string>
+    <string name="show_cat">Show the cat</string>
+    <string name="show_auto">Show the auto</string>
+    <string name="cat_activity">Cat activity!</string>
+    <string name="alert_view_clicked">View clicked!</string>
+    <string name="back">Return back</string>
+    <string name="connect">Подключение</string>
+    <string name="data"></string>
+</resources>
