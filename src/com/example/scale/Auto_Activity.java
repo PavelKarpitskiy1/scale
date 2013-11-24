@@ -12,26 +12,25 @@ import com.example.test_project.R;
  * User: Павел
  * Date: 13.11.13
  * Time: 17:12
- * To change this template use File | Settings | File Templates.
  */
 
-public class Auto_Activity extends Activity {
-
+public class Auto_Activity extends Activity implements OnItemSelectedListener {
     String[] data;
+    ImageView image;
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.auto);
-
-        final ImageView image = (ImageView) findViewById(R.id.picture);
+        image = (ImageView) findViewById(R.id.picture);
         final ImageView.ScaleType[] scaleTypes = ImageView.ScaleType.values();
 
         data = new String[scaleTypes.length];
 
-        for (int i =0; i < scaleTypes.length; i++)
-        {
+        for (int i = 0; i < scaleTypes.length; i++) {
             data[i] = scaleTypes[i].toString();
         }
 
@@ -44,19 +43,19 @@ public class Auto_Activity extends Activity {
         spinner.setPrompt("Title");
 
 
-        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
+        spinner.setOnItemSelectedListener(this);
+    }
 
-                Toast.makeText(getBaseContext(), "Position = " + position, Toast.LENGTH_SHORT).show();
-                image.setScaleType(ImageView.ScaleType.valueOf(data[position]));
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view,
+                               int position, long id) {
 
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-            }
-        });
+        Toast.makeText(getBaseContext(), "Position = " + position, Toast.LENGTH_SHORT).show();
+        image.setScaleType(ImageView.ScaleType.valueOf(data[position]));
 
+    }
 
-    } }
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
+    }
+}
